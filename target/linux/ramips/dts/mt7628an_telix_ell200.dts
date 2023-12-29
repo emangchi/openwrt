@@ -122,21 +122,21 @@
 		compatible = "gpio-export";
 		#size-cells = <0>;
 
-		/*9-> EPHY_LED4[GPIO#39]->LTE_RESET*/
+		/*9-> EPHY_LED4[GPIO#39]->LTE_RESET HIGH_ACTIVE*/
 		lte_reset {
 			gpio-export,name = "lte_reset";
 			gpio-export,output = <0>;
 			gpios = <&gpio 39 GPIO_ACTIVE_HIGH>;
 		};
 
-		/*30-> GPIO0[GPIO#11]->MAIN_POWER_OFF*/
+		/*30-> GPIO0[GPIO#11]->MAIN_POWER_OFF LOW_ACTIVE*/
 		main_power_off {
 			gpio-export,name = "main_power_off";
-			gpio-export,input = <0>;
+			gpio-export,input = <1>;
 			gpios = <&gpio 11 GPIO_ACTIVE_LOW>;
 		};
 
-		/*42-> MDI_RP_P2[GPIO#18]->RF_STATUS_LED*/
+		/*42-> MDI_RP_P2[GPIO#18]->RF_STATUS_LED LOW_ACTIVE*/
 		rf_status_led {
 			gpio-export,name = "rf_status_led";
 			gpio-export,output = <1>;
